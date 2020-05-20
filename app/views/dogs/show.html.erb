@@ -1,0 +1,7 @@
+<label>Single Dog</label>
+<%= @dog.name %> <br>
+<%= @dog.breed %> <br>
+<%= @dog.age %> <br>
+<% @dog.employees.each do |e| %>
+    <%= link_to e.get_name, employees_path(e)%>
+<% end %>

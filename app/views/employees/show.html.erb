@@ -1,0 +1,8 @@
+<label>Single Employee</label>
+<%= @employee.get_name %> <br>
+<%= @employee.alias %> <br>
+<%= @employee.title %> <br>
+<%= @employee.office %> <br>
+<%= link_to @employee.img_url, @employee.img_url%> <br>
+<img src=<%=@employee.img_url%> alt=<%=@employee.get_name%>>
+<%= @employee.dog.name %>
