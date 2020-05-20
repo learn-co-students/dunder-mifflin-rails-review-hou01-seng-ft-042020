@@ -1,0 +1,17 @@
+<h4>Name: <%=@employee.first_name%> <%=@employee.last_name%></h4>
+<p>
+Alias: <%= @employee.alias%><br>
+Title: <%= @employee.title%><br>
+Office: <%= @employee.office%><br>
+</p>
+<br>
+<br>
+
+<h5>Dog:</h5>
+
+<%= link_to @employee.dog.name, dog_path %>
+
+
+<%=form_with model: @employee, method: :delete do |f|%>
+<%=f.submit "delete employee"%>
+<%end%>
