@@ -1,0 +1,31 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e| %>
+        <li style="color: red">
+            <%= e %>
+        </li>
+    <%end%>
+<%end%>
+
+<h3>New Form</h3>
+<%= form_with model: @employee do |f| %>
+  <%= f.label "First Name" %>
+  <%= f.text_field :first_name %>
+  <%= f.label "Last Name" %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label "Upload Img Url" %>
+  <%= f.text_area :img_url %>
+  <br>
+  <%= f.label "Alias" %>
+  <%= f.text_field :alias %>
+  <br>
+  <%= f.label "Title" %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label "Office" %>
+  <%= f.text_field :office %>
+  <br>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+  <br>
+  <%= f.submit %>
+<% end %>

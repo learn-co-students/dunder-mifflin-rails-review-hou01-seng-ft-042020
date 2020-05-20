@@ -1,0 +1,4 @@
+<h3>All Dogs</h3>
+<% @sorted.each do |dog| %>
+    <li><%= link_to dog.name, dog_path(dog) %></li>
+<% end %>
