@@ -40,8 +40,6 @@ class EmployeesController < ApplicationController
             flash[:errors] = @employee.errors.full_messages #key can be anything
             redirect_to edit_employee_path
         end
-
-
     end
 
     def current_employee

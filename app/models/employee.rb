@@ -5,5 +5,4 @@ class Employee < ApplicationRecord
     def get_name
         self.first_name.capitalize + " " + self.last_name.capitalize
     end
-
 end
