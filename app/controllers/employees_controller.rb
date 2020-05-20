@@ -33,8 +33,15 @@ class EmployeesController < ApplicationController
     end
 
     def update
-        @employee.update(employee_params)
-        redirect_to @employee
+        if @employee.valid?
+            @employee.update(employee_params)
+            redirect_to @employee
+        else
+            flash[:errors] = @employee.errors.full_messages #key can be anything
+            redirect_to edit_employee_path
+        end
+
+
     end
 
     def current_employee

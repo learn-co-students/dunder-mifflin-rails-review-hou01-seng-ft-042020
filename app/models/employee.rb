@@ -6,7 +6,4 @@ class Employee < ApplicationRecord
         self.first_name.capitalize + " " + self.last_name.capitalize
     end
 
-    def title_exist?
-        
-    end
 end
