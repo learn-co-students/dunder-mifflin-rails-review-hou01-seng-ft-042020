@@ -1,4 +1,7 @@
 <h3>All Dogs</h3>
-<% @sorted.each do |dog| %>
-    <li><%= link_to dog.name, dog_path(dog) %></li>
-<% end %>
+
+<%= render "list", :object => @dogs %>
+
+<br>
+
+<%= button_to "Sort", sort_dogs_path, method: :get%>

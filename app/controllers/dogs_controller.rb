@@ -2,7 +2,10 @@ class DogsController < ApplicationController
 
     def index
         @dogs = Dog.all
-        @sorted = @dogs.sort_by {|dog| dog.employees.count}
+    end
+
+    def sort
+        @sorted = Dog.all.sort_by {|dog| dog.employees.count}
     end
 
     def show

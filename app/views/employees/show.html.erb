@@ -8,3 +8,5 @@
 <p>Title: <%= @employee.title %> </p>
 <p>Office: <%= @employee.office %> </p>
 <p>Dog: <%= @employee.dog.name %> </p>
+
+<%= button_to "Edit", edit_employee_path, method: :get%>
